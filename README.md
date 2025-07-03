@@ -15,9 +15,10 @@ mariadb-dump -u root -p --all-databases > ssafy_backup_all.sql
 - 출력 파일: `ssafy_backup_all.sql`
 
 📎 관련 스크린샷:
-- `3-1_database_full_backup.png`
-- `3-2after_drop.png` (백업 전후 확인)
-- `3-3_database_full_restore.png` (복구 완료 확인)
+
+![database_full_backup](3-1_database_full_backup.png)
+![after_drop](3-2after_drop.png)
+![database_full_restore](3-3_database_full_restore.png)
 
 ### ✅ 복구 명령어
 ```bash
@@ -36,9 +37,10 @@ mariadb-dump -u root ssafy datas > ssafy_backup_datas_table.sql
 - `ssafy` 데이터베이스 내 `datas` 테이블만 백업
 
 📎 관련 스크린샷:
-- `4-1_table_backup.png`
-- `4-2_table_drop.png` (테이블 삭제)
-- `4-3_table_restore_오타포함.png` (복구 재시도 포함)
+
+![table_backup](4-1_table_backup.png)
+![table_drop](4-2_table_drop.png)
+![table_restore](4-3_table_restore_오타포함.png)
 
 ### ✅ 복구 명령어
 ```bash
@@ -60,8 +62,9 @@ mysqlbinlog --database=ssafy --start-datetime="2025-07-04 04:20:00" "F:\mariadb\
 - 출력 파일: `ssafy_binlog.sql`
 
 📎 관련 스크린샷:
-- `5-2_DELETE.png` (삭제 쿼리 실행)
-- `5-3_binary.png` (binlog 추출 확인)
+
+![delete_query](5-2_DELETE.png)
+![binary_log](5-3_binary.png)
 
 ---
 
